@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.71f7f79b.css",
-    "main.js": "/react-gh-pages/static/js/main.607bc7a2.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.71f7f79b.css.map": "/react-gh-pages/static/css/main.71f7f79b.css.map",
-    "main.607bc7a2.js.map": "/react-gh-pages/static/js/main.607bc7a2.js.map"
+    "main.css": "/food-recipie-mentorkart/static/css/main.71f7f79b.css",
+    "main.js": "/food-recipie-mentorkart/static/js/main.607bc7a2.js",
+    "index.html": "/food-recipie-mentorkart/index.html",
+    "main.71f7f79b.css.map": "/food-recipie-mentorkart/static/css/main.71f7f79b.css.map",
+    "main.607bc7a2.js.map": "/food-recipie-mentorkart/static/js/main.607bc7a2.js.map"
   },
   "entrypoints": [
     "static/css/main.71f7f79b.css",
