@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import { json, useLocation } from 'react-router-dom';
 import SmallCard from './smallCard';
 import { renderIntoDocument } from 'react-dom/test-utils';
 
-const Info = (id) => {
+const Info = ({ id }) => {
     const [loading, setLoading] = useState(false)
     const [recepie, setRecepi] = useState(null);
 
 
     const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
     const getMoreDetail = async () => {
         setLoading(true)
-        const queryParams = new URLSearchParams(location.search);
         const id = queryParams.get('id');
         const url = `https://tasty.p.rapidapi.com/recipes/get-more-info?id=${id}`;
         const options = {
@@ -38,13 +38,22 @@ const Info = (id) => {
     }
     useEffect(() => {
         const cachedData = localStorage.getItem("cachedInfo");
-        if (cachedData) {
+
+
+        const id = queryParams.get('id');
+        console.log(id,)
+        if (id === JSON.parse(cachedData).id) {
+
+
+
             setRecepi(JSON.parse(cachedData));
             setLoading(false);
-            return;
-        } else {
 
+
+        } else {
+            console.log('came in error')
             getMoreDetail()
+
         }
 
     }, []);
